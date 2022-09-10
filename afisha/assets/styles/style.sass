@@ -1,0 +1,110 @@
+// @import "../fonts/fonts"
+
+\:root
+    --color-primary: #001733
+    --color-secondary: #01808c
+    --color-accent: #fc858c
+    --color-accent-2: #ffc5c9
+    --color-accent-3: #fb626b
+    --color-text: #575f6e
+    --color-text-2: #99a0b0
+
+html, body, div, span, ul, li, h1, h2, h3, h4, h5, h6, p, a
+    margin: 0
+    padding: 0
+    border: none
+    outline-offset: 0
+    outline: none
+
+html
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif !important
+    font-size: 100%
+
+    overflow-x: hidden
+    overflow-y: scroll
+    scroll-behavior: smooth
+    transition: none
+    
+    scrollbar-width: thin
+    scrollbar-color: var(--color-secondary) var(--color-primary)
+
+html *, ::after, ::before
+    box-sizing: inherit
+    transition: all 0.5s ease 0s
+
+\:root
+    --scroll-size: 10px
+
+::-webkit-scrollbar
+    width: var(--scroll-size)
+    height: var(--scroll-size)
+
+::-webkit-scrollbar-track
+    background: var(--color-primary)
+
+::-webkit-scrollbar-thumb
+    background-color: var(--color-secondary)
+    border-radius: 5px
+
+::-webkit-scrollbar-thumb:hover
+    box-shadow: inset 0px 0px 10px 2px rgba(256,256,256,.2)
+
+::-webkit-scrollbar-thumb:active
+    background-color: var(--color-accent)
+
+body
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    overflow: hidden
+    min-width: 100%
+    min-height: 100vh
+    transition: none
+    color: var(--color-primary)
+    
+    --scrollbar-width: calc(100vw - 100%)
+
+code 
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+ul
+    list-style-type: none
+a
+    text-decoration: none
+
+input, button
+    border: none
+    outline-offset: 0
+    outline: none
+    &:active, &:focus
+        transition: none
+        outline: 2px solid var(--color-accent) !important
+
+input:not([type="ckeckbox"]),
+input:not([type="radio"])
+    outline: 1px solid var(--color-secondary)
+
+img
+    display: block
+    object-fit: cover
+
+#root
+    width: 100%
+    transition: none
+
+
+.app
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100vh
+    transition: none
+
+
+.content-container
+    width: 100%
+    margin: 0 auto
+    padding-left: 20px
+    padding-right: 20px
+
+    

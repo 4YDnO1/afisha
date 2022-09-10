@@ -1,0 +1,36 @@
+
+.swiper-pagination
+	position: absolute
+	top: 50% !important
+	right: 16vh !important
+	width: auto !important
+	left: auto !important
+	margin: 0
+	
+.swiper-pagination-bullet
+	position: relative !important
+	display: flex !important
+	justify-content: center !important
+	align-items: center !important
+	margin: 40px 0px !important
+	border-radius: 0 !important
+	width: 0 !important
+	height: 0 !important
+	text-align: center !important
+	line-height: 30px
+	font-size: 26px
+	color:#fff
+	opacity: 1
+	z-index: 2 !important
+	&::after
+		position: absolute
+		content: ''
+		width: 8vh
+		height: 2px
+		left: 20px
+		background-color: #fff
+		color:#fff
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active
+	color:#fff
+	margin: 20px 0px !important
