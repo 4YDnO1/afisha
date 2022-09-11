@@ -1,7 +1,7 @@
 <?php
 return [
     "host" => "127.0.0.1",
-    "dbname" => "users",
+    "dbname" => "afisha",
     "username" => "root",
-    "password" => "root"
+    "password" => ""
 ];

@@ -1,9 +1,9 @@
 // @import "../fonts/fonts"
 
 \:root
-    --color-primary: #001733
+    --color-primary: #0D3618
     --color-secondary: #01808c
-    --color-accent: #fc858c
+    --color-accent: #067100
     --color-accent-2: #ffc5c9
     --color-accent-3: #fb626b
     --color-text: #575f6e
@@ -57,6 +57,9 @@ body
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
     overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     min-width: 100%
     min-height: 100vh
     transition: none
@@ -71,6 +74,19 @@ ul
 a
     text-decoration: none
 
+img
+    display: block
+    max-width: 100%
+    object-fit: cover
+
+
+.content-container
+    width: 100%
+    margin: 0 auto
+    padding-left: 20px
+    padding-right: 20px
+
+
 input, button
     border: none
     outline-offset: 0
@@ -83,28 +99,115 @@ input:not([type="ckeckbox"]),
 input:not([type="radio"])
     outline: 1px solid var(--color-secondary)
 
-img
-    display: block
-    object-fit: cover
-
-#root
-    width: 100%
-    transition: none
 
 
-.app
-    position: relative
+/*=== header ===*/
+.header
+    background-color: var(--color-primary)
+
+.header__button
     display: flex
-    flex-direction: column
-    justify-content: space-between
-    min-height: 100vh
-    transition: none
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    height: 40px
+    width: 40px
+    z-index: 99
+    & span, span::before, span::after
+        content: ''
+        position: absolute
+        width: 36px
+        height: 5px
+        background-color: white
+        border-radius: 6px
+    & span::before
+        bottom: 14px
+    & span::after
+        top: 14px
+    &:hover
+        cursor: pointer
+        span, span::before, span::after
+            background-color: var(--color-accent)
+    &.active span
+        background-color: transparent
+        &::before
+            bottom: 0
+            transform: rotate(45deg)
+        &::after
+            top: 0
+            transform: rotate(-45deg)
+/*=== End of header ===*/
 
 
-.content-container
+/*=== menu ===*/ 
+.menu
+    position: fixed
+    left: -100%
+    transform: translate3d(0px, 0px, 0px)
+    background-color: #144020
+    height: 100%
+    li
+        width: 100%
+        border-bottom: 2px solid white
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 60px
+            width: 100%
+
+    &.active
+        left: 0
+/*=== End of menu ===*/
+
+// addMesta start
+
+$background-color: #0D3618
+$background-button: #8a1212
+
+.addus
+    div 
+        margin-top: 15px
+    label 
+        font-weight: bolder
+    input 
+        width: 100%
+        padding: 5px
+        margin-top: 5px
+    textarea 
+        border:1px solid $background-color
+        resize: none
+        min-height: 53px
+        width: 100%
+.inputFile 
+    margin-top: 5px
+
+.text-addUserMest  
+    font-weight: bolder
+    font-size: 16px
+.buttonAddMest 
+    display: block
+    background-color: $background-button
     width: 100%
-    margin: 0 auto
-    padding-left: 20px
-    padding-right: 20px
+    height: 50px
+    margin:20px auto
+    color:#fff
+    border-radius: 10px
+.addUserMest 
+    margin-top: 23px
+    padding:11px 16px
+.error 
+    color: #ff0000
+    font-weight: bold
+// addMesta end
 
-    
+// menu swipes start
+
+.swiper-slide  
+    background-color: #00A672
+
+.slide1-text-title 
+    font-size: 18px
+
+// menu swipes end
+

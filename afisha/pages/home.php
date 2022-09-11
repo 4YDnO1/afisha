@@ -1,67 +1,84 @@
 <main class="flex flex-col">
-    <section class="home min-h-screen relative">
 
-        <div class="swiper min-h-screen absolute left-0 right-0 top-0 bottom-0">
-            <div class="swiper-wrapper">
 
-                <div class="swiper-slide overflow-hidden">
-                    <div class="overflow-hidden min-h-full relative">
-                        <img src="/assets/images/home1.png" alt="home-image-1" class="max-w-none min-h-full absolute left-[50%] translate-x-[-50%]">
-                    </div> 
-                </div>
-                <div class="swiper-slide overflow-hidden">
-                    <div class="overflow-hidden min-h-full relative">
-                        <img src="/assets/images/home1.png" alt="home-image-1" class="max-w-none min-h-full absolute left-[50%] translate-x-[-50%]">
-                    </div> 
-                </div>
-                <div class="swiper-slide overflow-hidden">
-                    <div class="overflow-hidden min-h-full relative">
-                        <img src="/assets/images/home1.png" alt="home-image-1" class="max-w-none min-h-full absolute left-[50%] translate-x-[-50%]">
-                    </div> 
-                </div>
-                <div class="swiper-slide overflow-hidden">
-                    <div class="overflow-hidden min-h-full relative">
-                        <img src="/assets/images/home1.png" alt="home-image-1" class="max-w-none min-h-full absolute left-[50%] translate-x-[-50%]">
-                    </div> 
-                </div>
+    <section class="home__tags z-[1] relative">
+        <div class="content-container container flex flex-col justify-center min-h-[120px] gap-2">
 
+            <span class="text-xl">
+                События в Альметьевске
+            </span>
+
+            <div class="swiper tag-swiper">
+                <div class="swiper-wrapper flex">
+
+                    <div class="swiper-slide overflow-hidden flex justify-center text-xl text-white"><a href="#">Кино</a></div>
+                    <div class="swiper-slide overflow-hidden flex justify-center text-xl text-white"><a href="#">Концерты</a></div>
+                    <div class="swiper-slide overflow-hidden flex justify-center text-xl text-white"><a href="#">Театры</a></div>
+                    <div class="swiper-slide overflow-hidden flex justify-center text-xl text-white"><a href="#">Детям</a></div>
+                    <div class="swiper-slide overflow-hidden flex justify-center text-xl text-white"><a href="#">Шоу</a></div>
+                    <div class="swiper-slide overflow-hidden flex justify-center text-xl text-white"><a href="#">Игры</a></div>
+
+                </div>
+            </div>
+
+            <div class="flex gap-1">
+                <p class="text-xl"><span>сегодня</span> <span>завтра</span> </p>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section class="home_slider">
+        <div class="swiper home-swiper">
+
+            <div class="swiper-wrapper flex h-[36vh]">
+                <div class="swiper-slide overflow-hidden">
+                    <div>
+                        <img src="/assets/images/home/slide1.png" alt="slide1" class="absolute">
+                        <div class="content-container container">
+                            <p class="slide1-text-title absolute bottom-[75px] z-[2] text-white font-bold">
+                                Дегустационное меню
+                            </p>
+                            <p class="slide1-text-p absolute z-[2] text-white bottom-[45px] ">
+                                22 сентября, с 15:00 до 22:00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide overflow-hidden">
+                    <div>
+                        <img src="/assets/images/home/slide1.png" alt="slide1" class="absolute">
+                        <div class="content-container container">
+                            ав
+                        </div>
+                    </div>
+                </div>  
             </div>
 
             <div class="swiper-pagination"></div>
 
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
-
         </div>
-
-
-        <?php require "req/header.php" ?>
-
-
-        <div class="header-list z-[1] relative">
-            <div class="container mx-auto">
-                <nav>
-                    <ul class="menu flex">
-                        <li class="m-3 uppercase"><a href="#">Кино</a></li>
-                        <li class="m-3 uppercase"><a href="#">Концерты</a></li>
-                        <li class="m-3 uppercase"><a href="#">Театры</a></li>
-                        <li class="m-3 uppercase"><a href="#">Детям</a></li>
-                        <li class="m-3 uppercase"><a href="#">Шоу</a></li>
-                        <li class="m-3 uppercase"><a href="#">игры</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div class="header-title z-[1] relative">
-            <div class="container mx-auto flex flex-col justify-evenly height">
-                <h1>АФИША СОБЫТИЙ
-                    В АЛЬМЕТЬЕВСКЕ</h1>
-                <div class="header-buttons flex justify-between">
-                    <a class = "header-but uppercase" href="#">Посмотреть</a>
-                </div>
-            </div>
-        </div>
-
     </section>
+
+
+    <section class="soon z-[2] mt-[-20px] bg-white rounded-3xl">
+        <div class="content-container container flex flex-col gap-1 pt-[20px]">
+            <p class="text-xl">События в вближайшие дни</p>
+            <div class="swiper soon-swiper">
+
+                <div class="swiper-wrapper flex h-[30vh]">
+                    <div class="swiper-slide overflow-hidden">
+                        <div>
+                            <img src="/assets/images/home/slide1.png" alt="slide1" class="absolute">
+                            
+                        </div>
+                    </div>
+  
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 </main>

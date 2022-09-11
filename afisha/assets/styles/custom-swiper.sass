@@ -1,36 +1,34 @@
+.tag-swiper 
+	.swiper-slide
+		min-width: min-content 
+		max-width: min-content
+		background-color: #00A672
+		padding: 5px 10px
+		border-radius: 15px
 
-.swiper-pagination
-	position: absolute
-	top: 50% !important
-	right: 16vh !important
-	width: auto !important
-	left: auto !important
-	margin: 0
-	
-.swiper-pagination-bullet
-	position: relative !important
-	display: flex !important
-	justify-content: center !important
-	align-items: center !important
-	margin: 40px 0px !important
-	border-radius: 0 !important
-	width: 0 !important
-	height: 0 !important
-	text-align: center !important
-	line-height: 30px
-	font-size: 26px
-	color:#fff
-	opacity: 1
-	z-index: 2 !important
-	&::after
+.home-swiper 
+	background-color: #00A672
+	.swiper-wrapper
+		background-color: #00A672
+	.swiper-slide
+		background-color: #00A672
+		position: relative
+		overflow: hidden
+		img
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			height: 100%
+			max-width: none
+	.swiper-pagination
 		position: absolute
-		content: ''
-		width: 8vh
+		bottom: 30px !important
+	.swiper-pagination-bullet
+		border-radius: 2px
+		position: relative	
+		width: 25px
 		height: 2px
-		left: 20px
-		background-color: #fff
-		color:#fff
+		background-color:#fff
 
-.swiper-pagination-bullet.swiper-pagination-bullet-active
-	color:#fff
-	margin: 20px 0px !important
+	.swiper-pagination-bullet.swiper-pagination-bullet-active
+		background-color:#fff

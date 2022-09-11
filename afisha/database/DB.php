@@ -24,22 +24,5 @@ class DB {
 		return $stmt;
 	}
 
-	// public static function select($table, $sql = '', $params = []) {
-	// 	$sql = "SELECT * FROM `$table` $sql";
-	// 	$stmt = self::query($sql, $params);
-	// 	return $stmt->fetchAll(PDO::FETCH_ASSOC);
-	// }
-
-	// public static function insert($table, $params) {
-	// 	$columns = '';
-	// 	$values = '';
-	// 	foreach ($params as $key => $value) {
-	// 		$columns .= "`$key`,";
-	// 		$values  .= ":$key,";
-	// 	}
-	// 	$columns = substr($columns, 0, -1);
-	// 	$values = substr($values, 0, -1);
-	// 	$sql = "INSERT INTO `$table` ($columns) VALUES ($values)";
-	// 	return self::query($sql, $params);
-	// }
+	
 }
